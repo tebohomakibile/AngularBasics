@@ -1,6 +1,7 @@
 <!-- The idea here is to  -->
 
 <div>
+  {{firstName}}
   <h1>{{ employee.name }}</h1>
   <h3>{{ employee.profession }}</h3>
   <p>{{ employee.address }}</p>
@@ -13,6 +14,6 @@
   </div>
 
   <div *ngIf="employee.phone.length == 0">
-    <p>No phone numbr supplied</p>
+    <p>No phone number supplied</p>
   </div>
 </div>

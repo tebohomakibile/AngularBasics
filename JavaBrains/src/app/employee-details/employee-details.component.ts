@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Emp } from './employee.model';
 
 @Component({
   selector: 'app-employee-details',
@@ -7,20 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeDetailsComponent implements OnInit {
 
-  employee = {
-    name: 'Teboho Makibile',
-    profession: 'Angular Developer',
-    address: '304 Oak Avenue Ferndale',
-    phone: [
-      '1234567890',
-      '0987654321',
-      '6543217890'
-    ]
-  };
+  @Input('employee') empOBJ: Emp;
 
-  constructor() { }
+  employee: any;
+
+  constructor() {}
 
   ngOnInit() {
+    this.employee = {
+      name: this.empOBJ.name,
+      profession: this.empOBJ.profession,
+      address: this.empOBJ.address,
+      phone: this.empOBJ.phone
+    };
   }
 
 }

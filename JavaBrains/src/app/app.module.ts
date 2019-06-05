@@ -15,4 +15,6 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
