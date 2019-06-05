@@ -1,3 +1,18 @@
-<p>
-  employee-details works!
-</p>
+<!-- The idea here is to  -->
+
+<div>
+  <h1>{{ employee.name }}</h1>
+  <h3>{{ employee.profession }}</h3>
+  <p>{{ employee.address }}</p>
+
+  <div *ngIf="employee.phone.length > 0">
+    <p>Phone: </p>
+    <ul>
+      <li *ngFor="let empPhone of employee.phone">{{ empPhone }}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="employee.phone.length == 0">
+    <p>No phone numbr supplied</p>
+  </div>
+</div>
