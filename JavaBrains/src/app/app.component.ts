@@ -11,6 +11,5 @@ export class AppComponent {
 
   constructor(){
     this.emp = new EmployeeDetailsComponent();
-  
   }
 }
