@@ -11,7 +11,7 @@ export class AppComponent {
 
   empObj: Employee;
 
-  constructor(){
+  constructor() {
     this.empObj = new Employee();
 
     this.empObj.name = 'Teboho Makibile';
