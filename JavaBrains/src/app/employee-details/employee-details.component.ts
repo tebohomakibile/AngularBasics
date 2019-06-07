@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Emp } from './employee.model';
+import { Employee } from './employee.model';
 
 @Component({
   selector: 'app-employee-details',
@@ -8,19 +8,22 @@ import { Emp } from './employee.model';
 })
 export class EmployeeDetailsComponent implements OnInit {
 
-  @Input('employee') empOBJ: Emp;
-
   employee: any;
+
+  @Input('expectedEmployeeObj') employeeOBJ: Employee;
 
   constructor() {}
 
+
+
   ngOnInit() {
     this.employee = {
-      name: this.empOBJ.name,
-      profession: this.empOBJ.profession,
-      address: this.empOBJ.address,
-      phone: this.empOBJ.phone
+      name: this.employeeOBJ.name,
+      profession: this.employeeOBJ.profession,
+      address: this.employeeOBJ.address,
+      phone: this.employeeOBJ.phone
     };
+
   }
 
 }
